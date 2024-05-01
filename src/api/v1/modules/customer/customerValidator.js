@@ -1,6 +1,6 @@
 import Joi from 'joi';
 
-//  Create customer validation
+// Create customer validation
 export const customerValidation = (data) => {
   const result = Joi.object()
     .keys({

@@ -2,7 +2,7 @@ import asyncHandler from '../../../../middlewares/asyncHandler.js';
 import { createCustomerService } from './customerServices.js';
 
 // @desc    Create customer
-// @route   POST /v1/api/customer/register
+// @route   POST /api/v1/customer/register
 // @access  Private
 export const createCustomer = asyncHandler(async (req, res) => {
   const newCustomer = await createCustomerService(req.body);
