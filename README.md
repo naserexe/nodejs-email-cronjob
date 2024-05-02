@@ -13,13 +13,14 @@
 2. Rename `example.env` to `.env`
 3. Update values inside `.env`
 4. Then run `npm install`
-5. Now run `npm start` to start the application or `npm run dev` as development mode
+5. Now run `npm start` to start the application or `npm run dev` in development mode
 
-#### Run using Docker - (For quick start)
-1. `cd` into project directory
+#### Run using Docker - (For a quick start)
+1. `cd` into the project directory
 2. Rename `example.env` to `.env`
 3. (Optional) Update values inside `.env`
-4. Now run `docker compose up -d` it should bring backend server and mongoDB database up, running, and connected.
+4. Now run `docker compose up -d` it should bring the backend server and MongoDB database up, running, and connected.
+   - Server will expose on http://localhost:5001
 
 ## Example API request and payload
 
@@ -34,4 +35,4 @@ Request body:
   "birthday": "2024-05-04"
 }
 ```
-- NOTE: `birthday` is ` #YYYY/mm/DD` format
+- NOTE: `birthday` is `YYYY/mm/DD` format
