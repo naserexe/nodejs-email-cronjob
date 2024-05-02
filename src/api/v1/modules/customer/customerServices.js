@@ -1,4 +1,4 @@
-import CustomerModel from '../../../../database/models/customerModel.js';
+import CustomerModel from '../../../../database/models/CustomerModel.js';
 
 export const createCustomerService = async (customerInfo) => {
   try {

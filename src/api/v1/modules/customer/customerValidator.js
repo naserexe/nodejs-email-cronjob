@@ -4,9 +4,9 @@ import Joi from 'joi';
 export const customerValidation = (data) => {
   const result = Joi.object()
     .keys({
-      name: Joi.string().required(),
-      email: Joi.string().required(),
-      company: Joi.string().required(),
+      name: Joi.string().max(30).min(4).required(),
+      email: Joi.string().email().max(50).required(),
+      company: Joi.string().max(50).min(4).required(),
       birthday: Joi.date().required(),
     })
     .validate(data, { abortEarly: false });

@@ -1,16 +1,25 @@
 ## Description
-- This is a NodeJS Express application that can send email automatically on customers birthday.
+- This Node JS Express application can send emails automatically on a customer's birthday.
 
-## Requirements
- - NodeJs version: 20 or later
- - MongoDB
+- The cron job will run every night when hour at 00 and minute at 00 to check if any customers have a birthday today. If found it'll then send a simple birthday email to all the customers has found.
+
 ## How to run
+
+#### Requirements
+  - NodeJs version: 20 or later
+  - MongoDB
 
 1. `cd` into project directory
 2. Rename `example.env` to `.env`
 3. Update values inside `.env`
 4. Then run `npm install`
 5. Now run `npm start` to start the application or `npm run dev` as development mode
+
+#### Run using Docker - (For quick start)
+1. `cd` into project directory
+2. Rename `example.env` to `.env`
+3. (Optional) Update values inside `.env`
+4. Now run `docker compose up -d` it should bring backend server and mongoDB database up, running, and connected.
 
 ## Example API request and payload
 

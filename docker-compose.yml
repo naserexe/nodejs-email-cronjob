@@ -1,0 +1,23 @@
+services:
+  db:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: test_db
+      MONGO_INITDB_ROOT_PASSWORD: my_secret
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data_container:/data/db
+    restart: on-failure
+
+  node-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5001"
+    depends_on:
+      - db
+
+volumes:
+  mongodb_data_container:
